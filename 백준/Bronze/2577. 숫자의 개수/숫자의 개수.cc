@@ -9,8 +9,8 @@ int main() {
     for (char c : s) {
         cnt[c - '0']++;
     }
-
-    for (int i = 0; i < 10; i++) {
-        cout << cnt[i] << '\n';
+    
+    for (int i : cnt) {
+        cout << i << '\n';
     }
 }
