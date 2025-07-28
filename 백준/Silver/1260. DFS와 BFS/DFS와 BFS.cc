@@ -12,8 +12,7 @@ void dfs(int nd) {
     vis[nd] = true;
     cout << nd << ' ';
 
-    for (int i = 0; i < vt[nd].size(); i++) {
-        int next = vt[nd][i];
+    for (int next : vt[nd]) {
         if (!vis[next]) {
             dfs(next);
         }
@@ -30,8 +29,7 @@ void bfs(int st) {
         q.pop();
         cout << nd << ' ';
 
-        for (int i = 0; i < vt[nd].size(); i++) {
-            int next = vt[nd][i];
+        for (int next : vt[nd]) {
             if (!vis[next]) {
                 vis[next] = true;
                 q.push(next);
